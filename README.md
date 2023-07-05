@@ -1,8 +1,16 @@
+# **THIS IS GOING AWAY**
+
+While this list is being kept updated, [you should now be using user-agents v2](https://github.com/opawg/user-agents-v2). It's more performant, more regularly updated, and better for everyone.
+
+- - -
+
 # User agent list
 
 A list of apps, services and bots that consume podcast **audio**. This data is used by a number of podcast hosts to assist with their analytics.
 
-One public example is [this page at Podnews](https://podnews.net/about/podcast-stats) which uses this data alongside the RSS UA.
+One public example is [this page at Podnews](https://podnews.net/about/podcast-stats) which uses this data alongside the RSS UA. We're aware that this data is used by a number of large podcast hosts and private podcasters too.
+
+[This page runs this data through a regex for 1,000 entries in OP3](https://podnews.net/article/op3-useragents).
 
 ## Contributing to the list
 
@@ -12,8 +20,10 @@ Each app, service or bot should have its own entry. The user_agents should be as
 
 Each entry _must_ contain the following properties:
 
+**Be careful about ensuring the file is correctly escaped.**
+
 * `user_agents` (array of strings): a list of regular expressions against which the requesting user-agent
-should be validated. Backslashes ("\\") should be escaped, so instead of `^Echo\/1\.`, the string should read `^Echo\\/1\\.`.
+should be validated.
 
 Each entry _can_ contain one of the following properties:
 
